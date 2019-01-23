@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Android Labs</string>
+    <string name ="hello_message">Hello World!</string>
+    <string name="ButtonText">I\'m a button</string>
+
+    <string name="WidgetPointer">Here are my widgets:</string>
+    <string name="TextButtonText">Button</string>
+    <string name="CheckBoxText">Check this out!</string>
+    <string name="SwitchButtonText">Switch on /  off</string>
+    <string name="TextEditText">Type your answer here</string>
+</resources>
