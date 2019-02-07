@@ -16,7 +16,7 @@
         android:layout_column="0"
         android:layout_columnSpan="2"
         android:layout_rowSpan="1"
-        android:text="@string/WidgetPointer"
+        android:text="@string/Widget"
         android:textSize="30sp" />
 
 
@@ -27,7 +27,7 @@
         android:layout_row="1"
         android:layout_columnSpan="1"
         android:layout_rowSpan="1"
-        android:text="@string/TextButtonText" />
+        android:text="@string/Button" />
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -47,7 +47,7 @@
         android:layout_column="0"
         android:layout_columnSpan="1"
         android:layout_rowSpan="1"
-        android:text="@string/CheckBoxText" />
+        android:text="@string/CheckBox" />
 
     <Switch
         android:id="@+id/switch2"
@@ -57,7 +57,7 @@
         android:layout_column="1"
         android:layout_columnSpan="1"
         android:layout_rowSpan="1"
-        android:text="@string/SwitchButtonText" />
+        android:text="@string/SwitchText" />
 
     <EditText
         android:id="@+id/editText"
@@ -68,7 +68,7 @@
         android:layout_column="0"
         android:layout_columnSpan="2"
         android:ems="10"
-        android:hint="@string/TextEditText"
+        android:hint="@string/EditText"
         android:inputType="textPersonName" />
 
 </GridLayout>

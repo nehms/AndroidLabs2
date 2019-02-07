@@ -1,11 +1,22 @@
 <resources>
-    <string name="app_name">Android Labs</string>
-    <string name ="hello_message">Hello World!</string>
+    <string name="app_name">Lab_3</string>
+    <string name="hello_message">Hello World!</string>
     <string name="ButtonText">I\'m a button</string>
 
-    <string name="WidgetPointer">Here are my widgets:</string>
-    <string name="TextButtonText">Button</string>
-    <string name="CheckBoxText">Check this out!</string>
-    <string name="SwitchButtonText">Switch on /  off</string>
-    <string name="TextEditText">Type your answer here</string>
+    <string name="Widget">Here are my widgets:</string>
+    <string name="Button">Button</string>
+    <string name="CheckBox">Check this out!</string>
+    <string name="SwitchText">Switch on /  off</string>
+    <string name="EditText">Type your answer here</string>
+
+    <string name="emailAddress">Enter your email address:</string>
+    <string name="emailHint">Type email here</string>
+    <string name="password">Type your password:</string>
+    <string name="Login">LOGIN</string>
+    <string name="Yourprofile">Your profile</string>
+    <string name="name">Your name:</string>
+    <string name="inputName">Enter your name</string>
+    <string name="inputEmail">Your email:</string>
+    <string name="YourPicture">Your Picture</string>
+   <string name="takePicture">Click the button above to take a picture</string>
 </resources>

@@ -15,7 +15,7 @@
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/WidgetPointer"
+            android:text="@string/Widget"
             android:textSize="30sp" />
     </LinearLayout>
 
@@ -28,7 +28,7 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/TextButtonText" />
+            android:text="@string/Button" />
 
         <ImageButton
             android:id="@+id/imageButton"
@@ -50,14 +50,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/CheckBoxText" />
+            android:text="@string/CheckBox" />
 
         <Switch
             android:id="@+id/switch2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/SwitchButtonText" />
+            android:text="@string/SwitchText" />
     </LinearLayout>
 
     <LinearLayout
@@ -73,7 +73,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="@string/TextEditText" />
+            android:hint="@string/EditText" />
     </LinearLayout>
 
 </LinearLayout>

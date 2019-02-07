@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:text="@string/WidgetPointer"
+        android:text="@string/Widget"
         android:textSize="30sp" />
 
     <Button
@@ -22,7 +22,7 @@
         android:layout_alignParentLeft="true"
         android:layout_toLeftOf="@id/imageButton"
         android:layout_below="@id/textView2"
-        android:text="@string/TextButtonText" />
+        android:text="@string/Button" />
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/imageButton"
-        android:text="@string/CheckBoxText" />
+        android:text="@string/CheckBox" />
 
     <Switch
         android:id="@+id/switch2"
@@ -46,15 +46,17 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/imageButton"
-        android:text="@string/SwitchButtonText" />
+        android:text="@string/SwitchText" />
 
     <EditText
         android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/TextEditText"
+        android:hint="@string/EditText"
         android:layout_below="@id/checkBox"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
         android:inputType="textPersonName" />
 
 </RelativeLayout>
