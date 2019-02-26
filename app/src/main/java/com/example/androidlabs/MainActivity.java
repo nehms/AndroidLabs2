@@ -3,13 +3,15 @@ package com.example.androidlabs;
 import android.content.Context;
 import android.content.Intent;
 import android.preference.PreferenceManager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.EditText;
 import android.content.SharedPreferences;
 import android.widget.Button;
 import android.view.View;
+
+import static android.content.Context.MODE_PRIVATE;
 
 
 public class MainActivity extends AppCompatActivity {

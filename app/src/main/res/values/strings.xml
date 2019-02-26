@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Lab_3</string>
+    <string name="app_name">Lab_4</string>
     <string name="hello_message">Hello World!</string>
     <string name="ButtonText">I\'m a button</string>
 
@@ -18,5 +18,10 @@
     <string name="inputName">Enter your name</string>
     <string name="inputEmail">Your email:</string>
     <string name="YourPicture">Your Picture</string>
-   <string name="takePicture">Click the button above to take a picture</string>
+    <string name="takePicture">Click the button above to take a picture</string>
+    <string name="gotoChat">Go to Chat</string>
+    <string name="SEND">SEND</string>
+    <string name="RECEIVE">RECEIVE</string>
+    <string name="TypeHere">Type here</string>
+
 </resources>

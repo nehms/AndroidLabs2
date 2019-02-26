@@ -53,5 +53,9 @@ public class ProfileActivity extends AppCompatActivity {
         }
     }
 
+    public void onClick(View view){
+        Intent intent=new Intent(view.getContext(), ChatRoomActivity.class);
 
+        startActivity(intent);
+    }
 }
