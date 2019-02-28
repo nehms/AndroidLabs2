@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lab_3</string>
+    <string name ="hello_message">Bonjour Le Monde!</string>
+    <string name="ButtonText">Je suis un Bouton</string>
+
+    <string name="Widget">Voici mes Widgets:</string>
+    <string name="Button">Bouton</string>
+    <string name="CheckBox">Regardez ca!</string>
+    <string name="SwitchText">Allumez / Eteindre</string>
+    <string name="EditText">Tapez votre reponse ici</string>
+
+    <string name="emailAddress">Entrez votre addresse courriel:</string>
+    <string name="emailHint">Ecrivez votre courriel ici</string>
+    <string name="password">Entrez votre Mot de passe:</string>
+    <string name="Login">CONNECTEZ-VOUS</string>
+    <string name="Yourprofile">Ton Profile</string>
+    <string name="name">Ton Nom:</string>
+    <string name="inputName">Entrez votre nom</string>
+    <string name="inputEmail">Ton Courriel:</string>
+    <string name="YourPicture">Ta Photo</string>
+    <string name="takePicture">Cliquez sur le bouton au dessus pour prendre une photo</string>
+    <string name="gotoChat">Allez dans la Conversation</string>
+    <string name="SEND">ENVOVEZ</string>
+    <string name="RECEIVE">RECEVOIR</string>
+    <string name="TypeHere">Tapez ici</string>
+
+</resources>
