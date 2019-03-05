@@ -1,48 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+
+    android:layout_height="match_parent">
 
 
     <ListView
+
         android:id="@+id/listChat"
-        android:layout_width="match_parent"
-        android:layout_height="550dp" />
 
-    <LinearLayout
+        android:stackFromBottom="true"
+
+        android:transcriptMode="alwaysScroll"
+
+        android:dividerHeight="0dp"
+
+        android:divider="@android:color/transparent"
+
         android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+
+        android:layout_above="@+id/buttonSend"/>
+
+
+
+    <Button
+
+        android:id="@+id/buttonSend"
+
+        android:layout_width="wrap_content"
+
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/buttonSend"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/SEND" />
+        android:layout_alignParentLeft="true"
 
-        <EditText
-            android:id="@+id/messageInput"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:hint="@string/TypeHere"
-            android:inputType="textPersonName" />
+        android:layout_alignParentBottom="true"
 
-        <Button
-            android:id="@+id/buttonReceive"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/RECEIVE" />
-
-
-    </LinearLayout>
+        android:text="@string/SEND" />
 
 
 
+    <EditText
 
-</LinearLayout>
+        android:id="@+id/messageInput"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+
+        android:layout_toRightOf="@+id/buttonSend"
+
+        android:layout_toLeftOf="@+id/buttonReceive"
+
+        android:hint="@string/TypeHere"/>
+
+
+
+    <Button
+
+        android:id="@+id/buttonReceive"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentRight="true"
+
+        android:layout_alignParentBottom="true"
+
+        android:text="@string/RECEIVE"/>
+
+</RelativeLayout>
