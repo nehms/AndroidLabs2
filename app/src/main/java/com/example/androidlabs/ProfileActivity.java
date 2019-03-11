@@ -27,8 +27,8 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
         //Log.e(ACTIVITY_NAME, “In function:"+"onCreate");
         Log.e(ACTIVITY_NAME, "In Function: onCreate");
-        mImageButton=(ImageButton)findViewById(R.id.imageButton2);
-        EditText emailText=(EditText)findViewById(R.id.nextEmail);
+        mImageButton= findViewById(R.id.imageButton2);
+        EditText emailText= findViewById(R.id.nextEmail);
         Intent intent=getIntent();
         String email=intent.getStringExtra("email");
         emailText.setText(String.format("%s",email));
@@ -55,6 +55,12 @@ public class ProfileActivity extends AppCompatActivity {
 
     public void onClick(View view){
         Intent intent=new Intent(view.getContext(), ChatRoomActivity.class);
+
+        startActivity(intent);
+    }
+
+    public void onClickToolbar(View view){
+        Intent intent=new Intent(view.getContext(), TestToolbar.class);
 
         startActivity(intent);
     }

@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_lab3);
         mPreferences = getSharedPreferences("email", MODE_PRIVATE);
-        emailText=(EditText)findViewById(R.id.email);
+        emailText= findViewById(R.id.email);
 
 
       //emailAddress=(EditText)this.getDelegate().findViewById(R.id.nextEmail);
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause(){
         super.onPause();
-        EditText email=(EditText) findViewById(R.id.email);
+        EditText email= findViewById(R.id.email);
 
         String emailAddress = emailText.getText().toString();
         SharedPreferences.Editor preferencesEditor = mPreferences.edit();
