@@ -13,7 +13,8 @@
         android:scaleType="centerInside"
         android:background="@drawable/row_receive"
         android:layout_width="34dp"
-        android:layout_height="34dp" />
+        android:layout_height="34dp"
+        />
 
     <TextView
         android:id="@+id/textViewMessage"

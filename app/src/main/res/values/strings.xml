@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Lab_5</string>
+    <string name="app_name">Lab_6</string>
     <string name="hello_message">Hello World!</string>
     <string name="ButtonText">I\'m a button</string>
 
@@ -13,6 +13,7 @@
     <string name="emailHint">Type email here</string>
     <string name="password">Type your password:</string>
     <string name="Login">LOGIN</string>
+
     <string name="Yourprofile">Your profile</string>
     <string name="name">Your name:</string>
     <string name="inputName">Enter your name</string>
@@ -20,8 +21,10 @@
     <string name="YourPicture">Your Picture</string>
     <string name="takePicture">Click the button above to take a picture</string>
     <string name="gotoChat">Go to Chat</string>
+    <string name="gototoolbar">Go to Toolbar page</string>
     <string name="SEND">SEND</string>
     <string name="RECEIVE">RECEIVE</string>
     <string name="TypeHere">Type here</string>
 
+    <string name="NewMessage">What is your new Message ?</string>
 </resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/sonic"
+        android:title="sonic"
+        android:icon="@drawable/sonic"
+        android:orderInCategory="50"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/flash"
+    android:title="flash"
+    android:icon="@drawable/flash"
+    android:orderInCategory="40"
+    app:showAsAction="always"/>
+
+
+   <item android:id="@+id/superman"
+    android:title="superman"
+    android:icon="@drawable/superman"
+    app:showAsAction="always"/>
+
+    <item android:id="@+id/cloud"
+        android:title="Cloud"
+        android:orderInCategory="100"
+        android:icon="@drawable/trash"
+        app:showAsAction="never"
+
+        />
+
+
+
+</menu>

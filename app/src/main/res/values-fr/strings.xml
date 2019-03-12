@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Lab_5</string>
+    <string name="app_name">Lab_6</string>
     <string name ="hello_message">Bonjour Le Monde!</string>
     <string name="ButtonText">Je suis un Bouton</string>
 
@@ -21,8 +21,10 @@
     <string name="YourPicture">Ta Photo</string>
     <string name="takePicture">Cliquez sur le bouton au dessus pour prendre une photo</string>
     <string name="gotoChat">Allez dans la Conversation</string>
+    <string name="gototoolbar">Allez vers la Barre d\'outils</string>
     <string name="SEND">ENVOVEZ</string>
     <string name="RECEIVE">RECEVOIR</string>
     <string name="TypeHere">Tapez ici</string>
+    <string name="NewMessage">Quelle est votre nouveau Message ?</string>
 
 </resources>
