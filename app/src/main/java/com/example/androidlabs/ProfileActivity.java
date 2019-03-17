@@ -20,6 +20,7 @@ public class ProfileActivity extends AppCompatActivity {
     String sharedPrefFile = "com.example.android.hellosharedprefs";
     String emailKey="1";
     String emailAddress;EditText emailText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,4 +65,13 @@ public class ProfileActivity extends AppCompatActivity {
 
         startActivity(intent);
     }
+
+    public void onClickWeather(View view){
+        Intent intent=new Intent(view.getContext(), WeatherForecast.class);
+
+        startActivity(intent);
+    }
+
+
+
 }

@@ -1,6 +1,8 @@
 package com.example.androidlabs;
 
 import android.content.DialogInterface;
+import android.content.Context;
+import android.database.Cursor;
 import android.inputmethodservice.KeyboardView;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -14,7 +16,12 @@ import android.widget.EditText;
 import android.widget.Toast;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.ViewGroup;
+import android.util.Log;
 import android.support.v7.app.AlertDialog;
+import android.widget.BaseAdapter;
+
+
 
 public class TestToolbar extends AppCompatActivity {
     android.support.v7.widget.Toolbar tBar;

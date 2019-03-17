@@ -1,7 +1,7 @@
 package com.example.androidlabs;
 
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+        import android.os.Bundle;
 
 public class SharedPreferences extends AppCompatActivity {
 

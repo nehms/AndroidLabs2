@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Lab_6</string>
+    <string name="app_name">Lab_7</string>
     <string name="hello_message">Hello World!</string>
     <string name="ButtonText">I\'m a button</string>
 
@@ -25,6 +25,13 @@
     <string name="SEND">SEND</string>
     <string name="RECEIVE">RECEIVE</string>
     <string name="TypeHere">Type here</string>
-
     <string name="NewMessage">What is your new Message ?</string>
+
+    <string name="GoToWeatherForecast">Launch the Weather Forecast</string>
+    <string name="speed">Wind Speed: %1$s</string>
+    <string name="max">Max Temperature: %1$s</string>
+    <string name="min">Min Temperature: %1$s</string>
+    <string name="current">Current Temperature: %1$s</string>
+
+
 </resources>
