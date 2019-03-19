@@ -28,10 +28,10 @@
     <string name="NewMessage">What is your new Message ?</string>
 
     <string name="GoToWeatherForecast">Launch the Weather Forecast</string>
-    <string name="speed">Wind Speed: %1$s</string>
+    <string name="speed">Wind: %1$s</string>
     <string name="max">Max Temperature: %1$s</string>
     <string name="min">Min Temperature: %1$s</string>
     <string name="current">Current Temperature: %1$s</string>
-
+    <string name="uvrating">UV Rating</string>
 
 </resources>

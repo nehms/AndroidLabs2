@@ -84,6 +84,17 @@
 
         android:layout_gravity="center"/>
 
+    <TextView
+
+        android:id="@+id/uvRating"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:text="UV Rating"
+
+        android:layout_gravity="center"/>
 
 
     <ProgressBar

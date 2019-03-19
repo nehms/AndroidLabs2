@@ -12,9 +12,14 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.content.Context;
+
+import org.json.JSONObject;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
+
+import java.io.BufferedReader;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.FileOutputStream;
 import java.net.HttpURLConnection;
@@ -32,6 +37,9 @@ import java.io.FileNotFoundException;
 public class WeatherForecast extends AppCompatActivity {
 
 
+    Bitmap image;
+    HttpURLConnection connection;
+    private double uvResult;
 
 
     @Override
@@ -51,9 +59,9 @@ public class WeatherForecast extends AppCompatActivity {
     private class ForecastQuery extends AsyncTask<String, Integer, String> {
 
         String windSpeed, min, max, currentTemp;
-        Bitmap image;
-        String iconName;
 
+        String iconName;
+        //  HttpURLConnection connection;
         String iconURL;
         ProgressBar loaderView = findViewById(R.id.loading);
 
@@ -114,47 +122,38 @@ public class WeatherForecast extends AppCompatActivity {
                         } else if (xpp.getName().equals("weather")) {
 
                             iconName = xpp.getAttributeValue(null, "icon");
-
                             iconURL = "http://openweathermap.org/img/w/" + iconName + ".png";
 
 
                             if (fileExistence(iconName + ".png")) {
-
-
                                 Log.i("downloaded", iconURL);
-
                                 Log.i("downloaded", "Downloaded, getting from storage: " + iconName + ".png");
 
-
                                 FileInputStream fis = null;
-
-
+                                try {
+                                    fis = openFileInput(iconName + ".png");
+                                } catch (FileNotFoundException e) {
+                                    e.printStackTrace();
+                                }
                                 image = BitmapFactory.decodeStream(fis);
 
-
                             } else {
-
                                 Log.i("downloading", iconURL);
-
                                 Log.i("downloading", "Downloading from internet: " + iconName + ".png");
 
+                                connection = (HttpURLConnection) new URL(iconURL).openConnection();
+                                connection.connect();
+                                int responseCode = connection.getResponseCode();
 
-                                image = HttpUtils.getImage(iconURL);
-
-                                FileOutputStream outputStream = openFileOutput(iconName + ".png", Context.MODE_PRIVATE);
-
-                                image.compress(Bitmap.CompressFormat.PNG, 80, outputStream);
-
-                                outputStream.flush();
-
-                                outputStream.close();
-
+                                if (responseCode == 200) {
+                                    image = BitmapFactory.decodeStream(connection.getInputStream());
+                                    FileOutputStream outputStream = openFileOutput(iconName + ".png", Context.MODE_PRIVATE);
+                                    image.compress(Bitmap.CompressFormat.PNG, 80, outputStream);
+                                    outputStream.flush();
+                                    outputStream.close();
+                                }
                             }
-
-
                             publishProgress(100);
-
-
                         }
 
                     }
@@ -162,12 +161,34 @@ public class WeatherForecast extends AppCompatActivity {
                     xpp.next();
 
                 }
+                URL uvUrl = new URL("http://api.openweathermap.org/data/2.5/uvi?appid=7e943c97096a9784391a981c4d878b22&lat=45.348945&lon=-75.759389");
+                HttpURLConnection uvConnection = (HttpURLConnection) uvUrl.openConnection();
+                input = uvConnection.getInputStream();
+
+                // create json object to gather response
+
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(input, "UTF-8"), 8);
+                StringBuilder stringBuilder = new StringBuilder();
+                String line = null;
+                while ((line = bufferedReader.readLine()) != null) {
+                    stringBuilder.append(line + "\n");
+                }
+                String result = stringBuilder.toString();
+
+                // create json table
+                JSONObject jsonObject = new JSONObject(result);
+                // get uv value under value attribute(double)
+                uvResult = jsonObject.getDouble("value");
+                Log.i("JSON Task :", "UV result" + uvResult);
+                // end of uv process
+                //call thread
+                Thread.sleep(2000);
 
 
-            } catch (Exception e) {
-
-
+            } catch (Exception ex) {
+                Log.e("AsyncTask", "Malformed URL:" + ex.getMessage());
             }
+
 
             return null;
 
@@ -225,6 +246,12 @@ public class WeatherForecast extends AppCompatActivity {
             TextView wind = findViewById(R.id.windSpeed);
 
             wind.setText(String.format(getResources().getString(R.string.speed), this.windSpeed));
+
+            TextView uvR = findViewById(R.id.uvRating);
+
+            uvR.setText("UV Rate" + Double.toString(uvResult));
+
+            //  uvR.setText(String.format(getResources().(R.string.uvrating),Double.toString(uvResult))));
 
 
             loaderView.setVisibility(View.INVISIBLE);

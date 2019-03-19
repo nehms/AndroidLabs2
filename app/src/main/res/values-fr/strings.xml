@@ -32,6 +32,6 @@
     <string name="max">Temperature Maximum: %1$s</string>
     <string name="min">Temperature Minimum: %1$s</string>
     <string name="current">Temperature Actuelle: %1$s</string>
-
+    <string name="uvrating">UV Rating</string>
 
 </resources>
