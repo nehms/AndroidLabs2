@@ -4,24 +4,36 @@ package com.example.androidlabs;
     public class Message {
 
 
-    String message;
-    private boolean checker;
-       private long id;
+        private long id;
+        private String message;
+        private boolean checker;
 
 
 
-        public Message(String message, boolean checker){
 
-this.message=message;
-this.checker=checker;
-        }
 
-        public Message()
 
+        public Message(long id ,String message, boolean checker)
         {
-            this("unknown",false);
+            this.id=id;
+            this.message=message;
+            this.checker=checker;
         }
 
+        public Message(String message, boolean checker) {
+            this.message=message;
+            this.checker=checker;
+        }
+        public Message() {
+        }
+
+        public long getId() {
+            return id;
+        }
+
+        public void setId(long id) {
+            this.id = id;
+        }
 
         public String getMessage() {
             return message;
@@ -39,11 +51,7 @@ this.checker=checker;
             this.checker = checker;
         }
 
-        public void setId(long id) {
-            this.id = id;
-        }
 
-        public long getId() {
-            return id;
-        }
+
+
     }
