@@ -20,7 +20,7 @@ public class DatabaseHelper  extends SQLiteOpenHelper {
     public static final String COL_MESSAGE = "Message";
     public static final String COL_ISSEND = "IsSend";
     public static final String COL_MESSAGEID = "MessageID";
-   public static final String CREATE_TABLE = "CREATE TABLE "+DB_TABLE+" ("+COL_MESSAGEID+" INTEGER PRIMARY KEY AUTOINCREMENT, "+COL_MESSAGE+" TEXT, "+COL_ISSEND+" BIT);";
+     public static final String CREATE_TABLE = "CREATE TABLE "+DB_TABLE+" ("+COL_MESSAGEID+" INTEGER PRIMARY KEY AUTOINCREMENT, "+COL_MESSAGE+" TEXT, "+COL_ISSEND+" BIT);";
     public static final int  DATABASE_VERSION=1;
 
      DatabaseHelper(Context context) {
@@ -75,6 +75,9 @@ public class DatabaseHelper  extends SQLiteOpenHelper {
         return result;
 
     }
+
+
+
 
     //je viens de add ca
     public int deleteData(long id){

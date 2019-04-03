@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    android:id="@+id/empty_frame"
+    android:id="@+id/frameLayout"
 >
 
     <TextView
-
         android:id="@+id/messageHere"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Message Here=" />
 
     <TextView
-
         android:id="@+id/idMessageDetails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,7 +21,6 @@
         android:text="ID=" />
 
     <Button
-
         android:id="@+id/buttonMessageDetails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

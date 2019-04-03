@@ -45,7 +45,7 @@ public class ChatRoomActivity extends AppCompatActivity {
         edt = findViewById(R.id.messageInput);
         databaseHelp = new DatabaseHelper(this);
 
-        boolean isTablet = findViewById(R.id.empty_frame) != null; //check if the FrameLayout is loaded --- fragment
+        boolean isTablet = findViewById(R.id.frameLayout) != null; //check if the FrameLayout is loaded --- fragment
 
         Cursor cursor = databaseHelp.viewData();
         if (cursor.getCount() != 0) {
@@ -89,7 +89,7 @@ public class ChatRoomActivity extends AppCompatActivity {
             Bundle dataToPass = new Bundle();
             dataToPass.putLong(ITEM_ID, message.getId());
             dataToPass.putInt(ITEM_POSITION, position);
-            // dataToPass.putLong(ITEM_ID, id);
+
             dataToPass.putString(ITEM_MSG, message.getMessage());
             dataToPass.putBoolean(ITEM_TYPE, message.isChecker());
             Log.e("Bundle data id", ITEM_ID);
@@ -104,7 +104,7 @@ public class ChatRoomActivity extends AppCompatActivity {
                 messageFragment.setTablet(true);  //tell the fragment if it's running on a tablet or not
                 getSupportFragmentManager()
                         .beginTransaction()
-                        .add(R.id.empty_frame, messageFragment) //Add the fragment in FrameLayout
+                        .add(R.id.frameLayout, messageFragment) //Add the fragment in FrameLayout
                         .addToBackStack("AnyName") //make the back button undo the transaction
                         .commit(); //actually load the fragment.
             } else //isPhone
@@ -116,9 +116,6 @@ public class ChatRoomActivity extends AppCompatActivity {
                 startActivityForResult(nextActivity, EMPTY_ACTIVITY); //make the transition
             }
 
-            // Display the selected item text on TextView
-            //tv.setText("Your favorite : " + selectedItem);
-            //}
         });
     }
 
@@ -128,35 +125,26 @@ public class ChatRoomActivity extends AppCompatActivity {
         if (requestCode == EMPTY_ACTIVITY) {
             if (resultCode == RESULT_OK) //if you hit the delete button instead of back button
             {
-                long id = data.getLongExtra(ITEM_ID, 0);
-                int position = data.getIntExtra(ITEM_POSITION, 0);
+                long id = data.getLongExtra(ITEM_ID, -1);
+                int position = data.getIntExtra(ITEM_POSITION, -1);
                 deleteMessageId(id, position);
             }
         }
     }
 
-   public void deleteMessageId(long id, long position) {
+   public void deleteMessageId(long id, int position) {
 
         Log.i("Delete this message:", " id=" + id);
-        int result = databaseHelp.deleteData(id);
+        long result = databaseHelp.deleteData(id);
 
-        if (result == 1) {
-             messages.remove(position);
+        if (result > 0) {
+            messages.remove(position);
             messageAdapter.notifyDataSetChanged();
         }
     }
-  /*  public void deleteMessageId(long id) {
 
-        Log.i("Delete this message:", " id=" + id);
-        int result = databaseHelp.deleteData(id);
-
-       messages.remove(id);
-            messageAdapter.notifyDataSetChanged();
-
-    }*/
-
-    private void updateMessageIntoList(final String msg, final boolean isSend) {
-        final Message model = new Message(msg, isSend);
+    private void updateMessageIntoList( String msg,  boolean isSend) {
+         Message model = new Message(msg, isSend);
         long id = databaseHelp.insertData(msg, isSend);
         if (id > -1) {
             model.setId(id);

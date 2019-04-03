@@ -4,8 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-//*************
+
 
 public class MessageFragment extends Fragment{
 
@@ -46,7 +44,7 @@ public class MessageFragment extends Fragment{
 
         //show the message:
         TextView messageText = (TextView)result.findViewById(R.id.messageHere);
-        messageText.setText("text=" + msg);
+        messageText.setText("TEXT =" + msg);
 
 
 

@@ -13,7 +13,6 @@ public class EmptyDetails extends AppCompatActivity {
 
 
     @Override
-
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
@@ -26,7 +25,7 @@ public class EmptyDetails extends AppCompatActivity {
         messageFragment.setTablet(false); //tell the Fragment that it's on a phone.
         getSupportFragmentManager()
                 .beginTransaction()
-                .add(R.id.empty_frame, messageFragment)
+                .add(R.id.frameLayout, messageFragment)
                 .addToBackStack("AnyName")
                 .commit();
 
